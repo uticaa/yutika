@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yutika Arora's Portfolio</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css" />
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"> Y<b>A</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#project">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="resume.html" ">Resume</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link " href="#contact">Contact</a>
+          </li>
+		 </ul>
+    </nav>
+    <section></section>
+    <section class="sec-fullpage main-page ">
+      <div class="container ">
+        <div class="row h-100 ">
+          <div class="col-12 text-center align-self-center ">
+            <h1>Hi! I'm Yutika Arora.</h1>
+            <p> UI/UX Designer | B.Des. in Communication Design, NIFT (2018-2022) </p>
+             <br>
+            <div class="row ">
+              <div class="col-12 ">
+                <ul class="list-unstyled list-inline text-center "> 
+                  <li class="list-inline-item "><a href="https://www.behance.net/uticaa" " target="_blank "><i class="fa fa-behance "></i></a></li>
+                  <li class="list-inline-item "><a href="https://www.linkedin.com/in/yutikaarora " target="_blank "><i class="fa fa-linkedin "></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-down "></div>
+    </section>
+		<p id="project">
+      <div class="container mt-2 ">
+        <div class="row ">
+          <div class="col-12 text-center ">
+            <h2>Featured Work</h2>
+            <p>
+			To see more, check out my <a href="https://www.behance.net/uticaa" target="_blank "> <u>Behance</u></a> account. 
+            </p>
+          </div>
+		  </div> </p>
+        <div class="row ">
+          <div class="card-deck ">
+  <div class="card ">
+    <img class="card-img-top " src="images/cover.png " alt="Connection Aid ">
+    <div class="card-body ">
+      <h5 class="card-title ">Connection Aid (Initiative By The Delhi Government)</h5>
+      <p class="card-text "><font color="#BEB9B9 ">This is a project for the design of an application that serves as a link between substance abusers, counsellors and their family members. <a href="https://www.behance.net/gallery/96335877/Connection-Aid-UIUX"> <br> <b> View Full Project > </b> </a> </font> </p>
+     
+    </div>
+  </div>
+  <div class="card ">
+    <img class="card-img-top " src="images/billie.png " alt="Card image cap ">
+    <div class="card-body ">
+      <h5 class="card-title ">Odyssey Buddy (Travel App Concept and Prototype) </h5>
+      <p class="card-text "><font color="#BEB9B9 ">Followed the design process to conceptualise and model a travel application that connects tourists with locals to solve their problems.  <a href="https://www.behance.net/gallery/82132473/Travel-App-Concept"> <br> <b> View Full Project > </b> </a> </font>  </p>
+      
+    </div>
+  </div>
+  <div class="card ">
+    <img class="card-img-top " src="images/nift.png " alt="Card image cap ">
+    <div class="card-body ">
+      <h5 class="card-title ">NIFT Website Redesign</h5>
+      <p class="card-text "> <font color="#BEB9B9 "> Redesign for the NIFT website to reduce clutter, and make the website more aesthetically appealing.  <a href="https://www.behance.net/gallery/105023001/NIFT-Website-Redesign"> <br> <br> <br> <b> View Full Project > </b> </a> </font>  </p>
+      
+      
+    </div>
+  </div>
+</div>
+      </div>
+		  </a>
+    </section>
+    <hr />
+		<a id="contact ">
+    <section class="mt-5 ">
+      <div class="container ">
+        <div class="row ">
+          <div class="col-12 text-center align-self-center ">
+           <p id="contact"> <h1>Let's get in touch</h1>
+            <p>
+              Have some interesting projects that you'd want me to be a part of? Drop in a message at:
+            </p> 
+			  
+			  <h3> design@yutikaarora.com </h3> <br> <br> 
+          </div>
+		  </div> </p> 
+      
+			
+			
+    <footer class="text-center ">
+      <div class="container ">
+        <div class="row ">
+          <div class="col-12 ">
+            <ul class="list-unstyled list-inline text-center "> 
+              <li class="list-inline-item "><a href="https://www.behance.net/uticaa" " target="_blank "> <i class="fa fa-behance "></i></a></li>
+              <li class="list-inline-item "><a href="https://www.linkedin.com/in/yutikaarora " target="_blank "><i class="fa fa-linkedin "></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-12 ">
+            <p>Made with <span style="color:#ffffff "><3</span> by Yutika Arora</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+		</a>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.3.1.min.js "></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js "></script>
+    <script src="js/bootstrap-4.3.1.js "></script>
+  </body>
+</html>
+		
+		
