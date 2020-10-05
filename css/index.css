@@ -3,16 +3,16 @@ html {
 }
 
 body {
-    background-color:#000000;
-    color: #fff;
+    background-color:#ffff;
+    color: #000;
 }
 
 a:link {
-  color: #fd69b3;
+  color: #000000;
 }
 
 a:visited {
-  color: #fd69b3;
+  color: #000000;
  }
 
 a:hover {
@@ -24,6 +24,7 @@ a:active {
   color: white;
 
 }
+
 
 .sec-fullpage {
     height: 100vh;
@@ -80,7 +81,7 @@ a:active {
 }
 
 .fa {
-    color: #fff;
+    color: #000000;
 }
 
 .fa-behance {
@@ -103,8 +104,8 @@ a:active {
     text-shadow: 0;
     width: 13px;
     height: 13px;
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
     z-index: 9;
     left: 50%;
     -webkit-transform: translate(-50%, 0%) rotate(45deg);
