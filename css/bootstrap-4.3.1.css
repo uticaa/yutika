@@ -4849,12 +4849,16 @@ input[type="button"].btn-block {
   -ms-flex-direction: column;
   flex-direction: column;
   min-width: 0;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.14);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.14);
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
   border: 0px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+	margin-top: 15px;
+	margin-right: 40px;
+	margin-left: 40px
+	
 }
 
 .card > hr {
