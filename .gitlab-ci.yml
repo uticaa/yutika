@@ -1,0 +1,12 @@
+image: node:18
+
+pages:
+  script:
+    - npm install
+    - npm run build
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main  # or 'master' if that's your default branch

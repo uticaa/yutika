@@ -1,0 +1,89 @@
+@import '../assets/styles/variables.css';
+
+.footer {
+  background-color: var(--background-muted);
+  color: var(--text-dark);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-sizing: border-box;
+  margin-top: 4rem;
+  padding-top: 4rem;
+  font-size: 1.25rem;
+  border-top: 1px dashed #7f7f7f;
+}
+
+.footer-section {
+  text-align: center;
+  z-index: 1;
+}
+
+.get-in-touch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.get-in-touch strong {
+  font-weight: bold;
+  color: var(--text-link-hover); /* Use variable */
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer-links a {
+  font-size: 1.75rem;
+  color: var(--text-link); /* Use variable */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--text-link-hover); /* Use variable */
+}
+
+.footer-credits p {
+  font-size: 1rem;
+  color: var(--text-muted); /* Use variable */
+}
+
+.made-with-love {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: center;
+  font-size: 1rem;
+}
+@media (max-width: 1024px) {
+  .footer {
+    padding-bottom: 8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .email-contact {
+    flex-direction: column  ;
+  }
+}
+.email-contact {
+  padding: 0.75rem 1.5rem; /* Padding for job items */
+  border-radius: 3rem; /* Rounded corners */
+  background: rgba(255, 255, 255, 0.05); /* Use variable */
+  color: var(--text-muted); /* Use variable */
+  border: 1px dashed rgba(127, 127, 127, 1);
+  width: fit-content;
+  display: flex;
+  gap: 0.5rem; /* Space between icon and text */
+  align-items: center;
+  position: relative;
+  font-size: 1.25rem;
+}
+ 

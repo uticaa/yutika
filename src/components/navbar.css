@@ -1,0 +1,65 @@
+@import '../assets/styles/variables.css';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  margin-left: auto;
+  margin-top: 3rem;
+}
+
+.navbar-links {
+  display: flex;
+  border: 0.01rem solid rgba(127,127,127,1);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(19,19,19,0.8);
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    left: 0;
+    top: 90%;
+    width: 100%;
+    display: flex;
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.navbar-links a {
+  font-size: 1.2rem; /* Size of the icons */
+  color: var(--text-muted); /* Use variable */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-links span {
+  font-size: 1.2rem; /* Size of the icons */
+  color: #7f7f7f; /* Use variable */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.navbar-links a:hover {
+  color: var(--text-link-hover); /* Use variable */
+}

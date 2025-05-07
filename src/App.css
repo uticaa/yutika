@@ -1,0 +1,65 @@
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+#root {
+  text-align: center;
+  font-size: 16px;
+  overflow: auto; /* Enable vertical scrolling */
+  background-color: var(--background-muted);
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px; /* Thickness of the progress bar */
+  background: linear-gradient(
+    to right,
+    #FFADAD 0%,
+    #FFD6A5 14.3%,
+    #FDFFB6 28.6%,
+    #CAFFBF 43%,
+    #9BF6FF 57.2%,
+    #A0C4FF 71.4%,
+    #BDB2FF 85.69%,
+    #FFC6FF 100%
+  ); /* Rainbow gradient */
+  background-size: 100% 100%; /* Ensure the gradient spans the full width */
+  background-clip: content-box; /* Prevent overflow of colors */
+  border-radius: 3px; /* Rounded edges for a smoother look */
+  z-index: 10000; /* Ensure it stays above other elements */
+  transition: width 100ms ease-out; /* Smooth transition for the progress */
+}
+
+/* Grid container */
+.grid-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+/* Grid points */
+.grid-point-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-point {
+  width: 5px;
+  height: 5px;
+  background-color: #1c1c1c; /* Subtle white points */
+  border-radius: 50%;
+  transition: transform 0.2s ease-out; /* Smooth distortion effect */
+}
+
+.container {
+  max-width: 1440px;
+  width: 85%;
+  margin: 0 auto;
+}
+

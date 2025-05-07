@@ -1,0 +1,141 @@
+@import '../assets/styles/variables.css';
+
+.projects {
+  background-color: var(--background-muted);
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  border-top: 1px dashed #7f7f7f;
+}
+
+.projects-title {
+  margin-bottom: 1rem;
+  color: var(--text-dark);;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projects-title a {
+  text-decoration: none;
+  color: var(--text-dark); /* Use variable */
+  cursor: pointer;
+}
+.projects-title .primary {
+  font-size: 2rem;
+}
+
+.projects-title .secondary {
+  font-size: 1rem;
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;;
+}
+
+.project-link {
+  z-index: 2;
+  text-decoration: none;
+  background: var(--background-muted);
+  border: 1px solid #7F7F7F; /* Use variable for border color */
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 30%;
+  overflow: hidden;
+}
+
+.project-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.project-name {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text-muted); /* Use variable */
+}
+
+.project-type {
+  font-size: 1rem;
+  color: #7f7f7f; /* Use variable */
+}
+
+.project-description {
+  font-size: 1rem;
+  color: var(--text-muted); /* Use variable */
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 220px;
+  padding: 1rem;
+}
+
+.projects-disclaimer {
+  padding: 0.75rem 1.5rem; /* Padding for job items */
+  border-radius: 1rem; /* Rounded corners */
+  background: rgba(255, 255, 255, 0.05); /* Use variable */
+  color: var(--text-muted); /* Use variable */
+  border: 1px dashed rgba(127, 127, 127, 1);
+  display: flex;
+  gap: 0.5rem; /* Space between icon and text */
+  align-items: center;
+  position: relative;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.sticky-image {
+  height: 2rem;
+  width: 2rem;
+}
+
+.locked-cursor {
+  cursor: url('/assets/yutika.svg'), not-allowed;
+}
+
+@media (max-width: 1350px) {
+  .project-link {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .project-link {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-link {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .project-content {
+    height: 270px
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-title .primary {
+    font-size: 1.5rem;
+  }
+}

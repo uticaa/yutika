@@ -1,0 +1,23 @@
+:root {
+  --background-muted: #131313; /* Dark muted background */
+  --text-dark: #D2D2D2BF; /* Light text color for dark mode */
+  --text-muted: #ffffff; /* Muted gray for text in dark mode */
+  --text-link: #9aa0a6; /* Muted gray-blue for links/icons in dark mode */
+  --text-link-hover: #ffffff; /* White for hover states */
+  --highlight: #ff6f61; /* Keep highlight color consistent */
+  --background-light: #2c2c2c; /* Dark background for tiles */
+  --border-light: #444444; /* Dark gray border */
+  --shadow-light: rgba(0, 0, 0, 0.5); /* Darker shadow */  
+}
+
+body.dark-mode {
+  --background-muted: #d3d3d3; /* Muted gray background */
+  --text-dark: #2c2c2c; /* Dark muted text color */
+  --text-muted: #4f4f4f; /* Muted gray for text */
+  --text-link: #6c757d; /* Muted gray-blue for links/icons */
+  --text-link-hover: #333333; /* Darker color for hover states */
+  --highlight: #ff6f61; /* Highlight color (e.g., for buttons or emphasis) */
+  --background-light: #ffffff; /* Light background for tiles */
+  --border-light: #e0e0e0; /* Light gray border */
+  --shadow-light: rgba(0, 0, 0, 0.1); /* Light shadow */
+}
