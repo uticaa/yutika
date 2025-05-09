@@ -1,0 +1,106 @@
+.project-template {
+    position: relative;
+    z-index: 2;
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+}
+
+.project-experience {
+    padding: 0.75rem 1.5rem; /* Padding for job items */
+    border-radius: 1rem; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.05); /* Use variable */
+    color: var(--text-muted); /* Use variable */
+    border: 1px dashed rgba(127, 127, 127, 1);
+    display: flex;
+    gap: 0.5rem; /* Space between icon and text */
+    align-items: center;
+    position: relative;
+    font-size: 1rem;  
+    margin-bottom: 2rem;  
+    box-sizing: border-box;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.heading .primary-heading {
+    font-size: 1.5rem;
+    color: #D2D2D2BF;
+}
+
+.description {
+    margin-bottom: 4rem;
+    text-align: left;
+    font-size: 1.5rem;
+    color: #ffffff;
+    border-bottom: 1px dashed #7F7F7F;
+}
+
+.heading .secondary-heading {
+    font-size: 3rem;
+    color: #FFFFFFBF;
+}
+
+.project-duration {
+    display: flex;
+    text-align: left;
+    margin-top: 1.5rem;
+}
+.cover-image {
+    width: 100%;
+    height: 360px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.secondary-image {
+    height: 360px;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    object-fit: cover;
+}
+.inner-container {
+    margin: 0 auto;
+    width: 800px;  
+}
+
+.problem-statement {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.overview-heading {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #FFFFFFBF;
+    margin-bottom: 2rem;
+}
+
+.overview-content {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 130%;
+    letter-spacing: 0%;
+
+}
+@media (max-width: 1024px) {
+    .inner-container {
+        width: 100%;
+    }
+}

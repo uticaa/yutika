@@ -86,7 +86,6 @@ function Projects() {
           Most of my work is under an NDA. Please <a href="#contact" style={{textDecoration: "underline", color: "white"}}>reach out</a> if you have any questions! :)
           </span>
         </span>
-        
       </div>
       <div className="projects-grid">
         {projectData.map((project) => (

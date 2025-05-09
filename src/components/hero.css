@@ -18,12 +18,13 @@
   flex-direction: column;
   color: var(--text-dark);
   width: 60%;
+  z-index: 2;
 }
 
 .hero-animation {
   width: 40%;
   height: 450px;
-  z-index: 0
+  z-index: 2
 }
 
 .hero-title {

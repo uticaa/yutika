@@ -12,6 +12,7 @@ import bezier from '../assets/bezier.svg'; // Import the image
 import note from '../assets/note.svg'; // Import the image
 import heart from '../assets/heart.svg'; // Import the image
 import box from '../assets/box.svg'; // Import the image
+import travel from '../assets/travel.svg'; // Import the image
 
 function HERO() {
   useEffect(() => {
@@ -30,7 +31,9 @@ function HERO() {
     let angleOffset = 0; // Initial rotation angle
     let animationFrameId: number; // To store the animation frame ID
 
-    const images = [yutika, char, sticky, pen, bezier, note, heart, box]; // Array of image sources
+    const images = [travel, char, sticky, pen, bezier, note, heart, box]; // Array of image sources
+    const yuts = new Image()
+    yuts.src = yutika;
     const numImages = 8; // Number of images
     const loadedImages: HTMLImageElement[] = [];
 
@@ -78,7 +81,15 @@ function HERO() {
           const img = loadedImages[i % loadedImages.length]; // Cycle through images
 
           if (img.complete) {
-            ctx.drawImage(img, x, y, 30, 30); // Draw the image
+            if(i === 0) {
+              ctx.save(); // Save the current canvas state
+              ctx.translate(x + 15, y + 15); // Move the canvas origin to the image's center
+              ctx.rotate(Math.PI / 4); // Rotate the canvas by 45 degrees
+              ctx.drawImage(img, -15, -15, 30, 30); // Draw the image (centered)
+              ctx.restore(); // Restore the canvas state
+            } else {
+              ctx.drawImage(img, x, y, 30, 30); // Draw the image
+            }
           }
         }
 
@@ -88,7 +99,7 @@ function HERO() {
         ctx.fillStyle = 'rgba(217, 217, 217, 0.02)';
         ctx.fill();
 
-        const img = loadedImages[0];
+        const img = yuts;
         if (img.complete) {
           ctx.drawImage(img, centerX - (radius - 70) * 0.75, centerY - (radius - 70) * 0.75, (radius - 70) * 1.5, (radius - 70) * 1.5); // Draw the image
         }

@@ -1,14 +1,18 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import HERO from './components/hero';
 import Projects from './components/projects';
 import Footer from './components/footer';
 import Navbar from './components/navbar';
+import AtomMeditationApp from './components/projects/atom-meditation-app';
+import GsInternship from './components/projects/gs-internship';
 
 function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [gridDimensions, setGridDimensions] = useState({ rows: 0, cols: 0 });
+  const location = useLocation(); // Get the current route
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,49 +45,62 @@ function App() {
     setCursorPosition({ x: e.clientX, y: e.clientY });
   };
 
+  // Determine if scrolled should be true based on the current route
+  const isScrolled = location.pathname !== '/'; // Example: Set scrolled to true for all routes except "/"
+
   return (
-    <div className='container'>
-      <div className="progress-bar" style={{ width: `${scrollProgress}%` }}></div>
-      <Navbar/>
-      <div className="grid-container" onMouseMove={handleMouseMove} style={{
-                gridTemplateColumns: `repeat(${gridDimensions.cols}, 1fr)`,
-                gridTemplateRows: `repeat(${gridDimensions.rows}, 1fr)`
-              }}>
-      {Array.from({ length: gridDimensions.rows * gridDimensions.cols }).map((_, index) => {
-          // Calculate the position of each grid point
-          const row = Math.floor(index / gridDimensions.cols);
-          const col = index % gridDimensions.cols;
-          const pointX = col * 24 + 12; // 50px spacing, 25px offset for center
-          const pointY = row * 24 + 12;
+      <div className='container'>
+        <div className="progress-bar" style={{ width: `${scrollProgress}%` }}></div>
+        <Navbar scrolled={scrollProgress > 0 || isScrolled}/>
+        <div className="grid-container" onMouseMove={handleMouseMove} style={{
+                  gridTemplateColumns: `repeat(${gridDimensions.cols}, 1fr)`,
+                  gridTemplateRows: `repeat(${gridDimensions.rows}, 1fr)`
+                }}>
+        {Array.from({ length: gridDimensions.rows * gridDimensions.cols }).map((_, index) => {
+            // Calculate the position of each grid point
+            const row = Math.floor(index / gridDimensions.cols);
+            const col = index % gridDimensions.cols;
+            const pointX = col * 24 + 12; // 50px spacing, 25px offset for center
+            const pointY = row * 24 + 12;
 
-          // Calculate the distance from the cursor to the grid point
-          const dx = cursorPosition.x - pointX;
-          const dy = cursorPosition.y - pointY;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+            // Calculate the distance from the cursor to the grid point
+            const dx = cursorPosition.x - pointX;
+            const dy = cursorPosition.y - pointY;
+            const distance = Math.sqrt(dx * dx + dy * dy);
 
-          // Apply transformation only if the distance is within 100px
-          const transform =
-            distance < 50
-              ? `translate(${dx * 0.2}px, ${dy * 0.2}px)` // Scale the movement
-              : 'none';
+            // Apply transformation only if the distance is within 100px
+            const transform =
+              distance < 50
+                ? `translate(${dx * 0.2}px, ${dy * 0.2}px)` // Scale the movement
+                : 'none';
 
-          return (
-            <div key={index} className="grid-point-container">
-              <span
-                className="grid-point"
-                style={{
-                  transform,
-                  transition: distance < 50 ? 'transform 0.1s ease-out' : 'transform 0.3s ease-in',
-                }}
-              ></span>
-            </div>
-          );
-        })}
+            return (
+              <div key={index} className="grid-point-container">
+                <span
+                  className="grid-point"
+                  style={{
+                    transform,
+                    transition: distance < 50 ? 'transform 0.1s ease-out' : 'transform 0.3s ease-in',
+                  }}
+                ></span>
+              </div>
+            );
+          })}
+        </div>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <HERO />
+              <Projects />
+              <Footer />
+            </>
+          } 
+          />
+          <Route path="/projects/atom-meditation-app" element={<AtomMeditationApp />} />
+          <Route path="/projects/gs-internship" element={<GsInternship />} />
+        </Routes>
+        
       </div>
-      <HERO />
-      <Projects />
-      <Footer />
-    </div>
   );
 }
 

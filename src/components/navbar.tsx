@@ -1,17 +1,22 @@
 import './navbar.css';
+import yutika from '../assets/yutika.svg'; // Import the image
 
-function Navbar() {
+function Navbar({scrolled} : {scrolled: boolean}) {
   return (
     <nav className="navbar">
       <div className="navbar-content">
         <div className="navbar-links">
+          {scrolled && 
+            <>
+              <a href="/" rel="noopener noreferrer" aria-label="Work">
+              <img src={yutika} style={{height: 25, width: 25}}/>
+              </a>
+              <span>/</span>
+            </>
+          }
           <a href="#projects" rel="noopener noreferrer" aria-label="Work">
             Work
           </a>
-          {/* <span>/</span> */}
-          {/* <a href="" rel="noopener noreferrer" aria-label="Home">
-            About
-          </a> */}
           <span>/</span>
           <a href="#contact" rel="noopener noreferrer" aria-label="Contact">
             Contact
