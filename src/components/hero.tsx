@@ -122,7 +122,7 @@ function HERO() {
   }, []);
 
   return (
-    <div className="hero">
+    <div className="hero" id="hero">
       <div className="hero-content">
         <span className="hero-title">Hi, I'm Yutika!</span>
         <span className="hero-subtitle" style={{ marginBottom: 0 }}>
@@ -142,7 +142,7 @@ function HERO() {
             Product Designer at <img src={gs} alt="Goldman Sachs" className="hero-image" /> Goldman Sachs
           </span>
           <span className="hero-job">
-            Previously an inern at <img src={atom} alt="Atom EI" className="hero-image" /> Atom EI and <img src={delhi} alt="Delhi Govt." className="hero-image" /> Govt. of Delhi
+            Previously an intern at <img src={atom} alt="Atom EI" className="hero-image" /> Atom EI and <img src={delhi} alt="Delhi Govt." className="hero-image" /> Govt. of Delhi
           </span>
           <span className="hero-job">
             Studied at <img src={nift} alt="NIFT" className="hero-image" />National Institute of Fashion Technology
