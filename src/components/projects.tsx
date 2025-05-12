@@ -84,7 +84,7 @@ function Projects() {
         <span style={{display: 'flex', flexDirection: 'column', marginLeft: '1rem', alignItems: "flex-start"}}>
           <span style={{color: "#7f7f7f"}}>Note</span>
           <span style={{textAlign: "left"}}>
-          Most of my work is under an NDA. Please <a href="#contact" style={{textDecoration: "underline", color: "white"}}>reach out</a> if you have any questions! :)
+          Most of my work is under an NDA. Please <a href="#contact" style={{textDecoration: "underline", color: "white", textUnderlineOffset: "4px"}}>reach out</a> if you have any questions! :)
           </span>
         </span>
       </div>
