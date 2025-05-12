@@ -16,7 +16,7 @@ function Projects() {
       image: gs_screen, 
       name: 'Form Pattern Documentation',
       type: 'Goldman Sachs | Internship',
-      description: 'My experience working on the form patterns documentation for the GS design system.',
+      description: 'Documented the design system’s first pattern to support scalable, consistent design practices.',
       infoButton: 'Case Study',
       icon: <i className="fas fa-external-link-alt"></i>,
       link: '/projects/gs-internship'
