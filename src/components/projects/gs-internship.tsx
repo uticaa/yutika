@@ -6,7 +6,7 @@ function GsInternship() {
     const projectDetails = {
         name: "GS Design System",
         title: "Form Pattern Documentation",
-        date: <span><i className="fa-solid fa-calendar" style={{marginRight: "4px"}}></i>  June 2021 | <i className="fa-solid fa-clock" style={{marginRight: "8px", marginLeft: "4px"}}></i>8 Weeks</span>,
+        date: <span><i className="fa-solid fa-calendar" style={{marginRight: "4px"}}></i>  June 2021 | <i className="fa-solid fa-clock" style={{marginRight: "8px", marginLeft: "4px"}}></i>6 Weeks</span>,
         description: "The Goldman Sachs Design System is customized for institutional finance and allows teams to create digital products that put clients first.",
         overview: "As part of my internship, I led the effort to document the first pattern in the design system—the Form Pattern. This project aimed to bring clarity, consistency, and scalability to form design across the firm. By combining internal insights with industry research and close collaboration with the design system team, I created a comprehensive resource that could be leveraged by designers, developers, and product managers.",
         note: {

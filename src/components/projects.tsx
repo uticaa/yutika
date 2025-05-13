@@ -5,8 +5,9 @@ import gs_screen from '../assets/images/gs_screen.png'; // Import the image
 import atom_ei from '../assets/images/atom_ei.png'; // Import the image
 import virtual_classroom from '../assets/images/virtual_classroom.png'; // Import the image
 import odyssey from '../assets/images/odyssey.png'; // Import the image
-
 import sticky from '../assets/sticky.svg'; // Import the image
+
+import { Link } from 'react-router-dom'; // Import Link for internal navigation
 
 function Projects() {
   const projectData = [
@@ -15,10 +16,10 @@ function Projects() {
       image: gs_screen, 
       name: 'Form Pattern Documentation',
       type: 'Goldman Sachs | Internship',
-      description: 'My experience working on the form patterns documentation for the GS design system.',
-      infoButton: 'Under NDA',
-      icon: <i className="fa-solid fa-lock"></i>,
-      link: null
+      description: 'Documented the design system’s first pattern to support scalable, consistent design practices.',
+      infoButton: 'Case Study',
+      icon: <i className="fas fa-external-link-alt"></i>,
+      link: '/projects/gs-internship'
     },
     {
       id: 2,
@@ -83,13 +84,29 @@ function Projects() {
         <span style={{display: 'flex', flexDirection: 'column', marginLeft: '1rem', alignItems: "flex-start"}}>
           <span style={{color: "#7f7f7f"}}>Note</span>
           <span style={{textAlign: "left"}}>
-          Most of my work is under an NDA. Please <a href="#contact" style={{textDecoration: "underline", color: "white"}}>reach out</a> if you have any questions! :)
+          Most of my work is under an NDA. Please <a href="#contact" style={{textDecoration: "underline", color: "white", textUnderlineOffset: "4px"}}>reach out</a> if you have any questions! :)
           </span>
         </span>
       </div>
       <div className="projects-grid">
-        {projectData.map((project) => (
-          <a href={project.link !== null ? project.link : "javascript:void(0)"} className={`project-link ${project.link === null ? 'locked-cursor': ''}`} rel="noopener noreferrer" aria-label={project.name} key={project.id}>
+      {projectData.map((project) => {
+          return project.link !== null && project.link.startsWith('/') ? (
+            <Link to={project.link} className="project-link" aria-label={project.name} key={project.id}>
+            <div className="project-tile">
+              <img src={project.image} alt={project.name} className="project-image" />
+              <div className="project-content">
+                <span className="project-name">{project.name}</span>
+                <span className="project-type">{project.type}</span>
+                <span className="project-description">{project.description}</span>
+                <span className="hero-job" style={{ marginTop: 'auto', fontSize: '0.75rem' }}>
+                  {project.infoButton} {project.icon}
+                </span>
+              </div>
+            </div>
+          </Link>
+          ) :  // If the link is not null and starts with '/', use HashLink
+          (
+          <a href={project.link !== null ? project.link : "javascript:void(0)"} target="__blank" className={`project-link ${project.link === null ? 'locked-cursor': ''}`} rel="noopener noreferrer" aria-label={project.name} key={project.id}>
             <div key={project.id} className="project-tile">
             <img src={project.image} alt={project.name} className="project-image" />
             <div className="project-content">
@@ -102,7 +119,7 @@ function Projects() {
             </div>
           </div>
           </a>
-        ))}
+        )})}
       </div>
     </section>
   );
