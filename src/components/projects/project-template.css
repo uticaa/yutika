@@ -44,6 +44,7 @@
 }
 
 .project-duration {
+    color: #FFFFFFBF;
     display: flex;
     text-align: left;
     margin-top: 1.5rem;
@@ -97,7 +98,7 @@
     font-size: 1rem;
     line-height: 130%;
     letter-spacing: 0%;
-
+    color: #ffffff;
 }
 @media (max-width: 1024px) {
     .inner-container {

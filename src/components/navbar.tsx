@@ -8,17 +8,17 @@ function Navbar({scrolled} : {scrolled: boolean}) {
         <div className="navbar-links">
           {scrolled && 
             <>
-              <a href="/" rel="noopener noreferrer" aria-label="Work">
+              <a href="/#hero" rel="noopener noreferrer" aria-label="Work">
               <img src={yutika} style={{height: 25, width: 25}}/>
               </a>
               <span>/</span>
             </>
           }
-          <a href="#projects" rel="noopener noreferrer" aria-label="Work">
+          <a href="/#projects" rel="noopener noreferrer" aria-label="Work">
             Work
           </a>
           <span>/</span>
-          <a href="#contact" rel="noopener noreferrer" aria-label="Contact">
+          <a href="/#contact" rel="noopener noreferrer" aria-label="Contact">
             Contact
           </a>
           <span>/</span>

@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { BrowserRouter as Routes, Route, useLocation } from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import HERO from './components/hero';
 import Projects from './components/projects';
@@ -13,6 +13,19 @@ function App() {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [gridDimensions, setGridDimensions] = useState({ rows: 0, cols: 0 });
   const location = useLocation(); // Get the current route
+  const prevPathname = useRef(location.pathname); // Store the previous pathname
+
+  useEffect(() => {
+    console.log('Current route:', location.pathname); // Log the current route
+    console.log('Previous route:', prevPathname.current); // Log the previous route
+    // Scroll to the top of the page only when the pathname changes
+    if (location.pathname !== prevPathname.current) {
+      if(location.pathname !== '/') {
+        window.scrollTo(0, 0);
+      }
+      prevPathname.current = location.pathname; // Update the previous pathname
+    }
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleResize = () => {
