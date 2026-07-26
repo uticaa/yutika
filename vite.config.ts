@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default {
   base: '/',
   plugins: [react()],
   build: {
@@ -10,4 +10,4 @@ export default defineConfig({
     assetsDir: 'assets',
     sourcemap: true
   }
-})
+}
