@@ -18,7 +18,7 @@ interface ProjectDetails {
     outcomes: any;
     takeaways: any;
     description: string;
-    overview: string;
+    overview: any;
   }
 
 function ProjectTemplate({projectDetails}: {projectDetails: ProjectDetails}) {
